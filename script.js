@@ -11,6 +11,10 @@ function addTodo() {
       if (newTask) li.textContent = newTask;
     });
 
+    li.addEventListener("click", () => {
+      confirm("Apakah Anda yakin ingin menghapus tugas ini?") && li.remove();
+    });
+
     list.appendChild(li);
     input.value = "";
   }
